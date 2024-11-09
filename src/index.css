@@ -1,3 +1,12 @@
+:root {
+  --dark-blue-color: #123456;
+  --blue-color: #0b4278;
+  --light-blue-color: #0a5096;
+
+  --dark-green-color: #0e3b04;
+  --light-green-color: #204c16;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,27 +23,30 @@ body, #root {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #123456;
+  background-color: var(--dark-blue-color);
 }
 
 .my-app-title {
   color: white;
 }
 
-.sign-out-action {
+.action {
   width: 100px;
-  background-color: #0a5096;
-  color: white;
-  border: 1px solid #0b4278;
   border-radius: 5px;
   font-weight: bold;
   font-size: 1.125rem;
   cursor: pointer;
 }
 
+.sign-out-action {
+  background-color: var(--light-blue-color);
+  color: white;
+  border: 1px solid var(--blue-color);
+}
+
 .sign-out-action:hover {
-  background-color: #0b4278;
-  border-color: #0a5096;
+  background-color: var(--blue-color);
+  border-color: var(--light-blue-color);
 }
 
 .container {
@@ -46,4 +58,67 @@ body, #root {
   margin: 15%;
   font-weight: bold;
   font-size: 1.725rem;
+}
+
+.form-container {
+  margin: 10%;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.form {
+  padding: 50px 20px 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--dark-blue-color);
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px var(--dark-blue-color);
+}
+
+.form-control {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.form-control input {
+  height: 30px;
+}
+
+.form-actions {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-actions button {
+  height: 40px;
+}
+
+.sign-up-action {
+  background-color: var(--light-green-color);
+  color: white;
+  border: 1px solid var(--dark-green-color);
+}
+
+.sign-up-action:hover {
+  background-color: var(--dark-green-color);
+  border-color: var(--light-green-color);
+}
+
+.sign-in-action {
+  background-color: var(--light-blue-color);
+  color: white;
+  border: 1px solid var(--blue-color);
+}
+
+.sign-in-action:hover {
+  background-color: var(--blue-color);
+  border-color: var(--light-blue-color);
 }

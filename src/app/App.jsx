@@ -1,11 +1,11 @@
 import RootLayout from "../layouts/RootLayout"
 
-import Home from "../pages/Home"
+import SignUser from "../pages/SignUser"
 
 const App = () => {
   return (
     <RootLayout>
-      <Home />
+      <SignUser />
     </RootLayout>
   )
 }

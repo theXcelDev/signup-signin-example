@@ -3,7 +3,7 @@ const RootLayout = ({ children }) => {
     <>
       <header className="header">
         <h1 className="my-app-title">myApp</h1>
-        <button className="sign-out-action">Sign out</button>
+        <button className="action sign-out-action">Sign out</button>
       </header>
       <main className="container">
         {children}

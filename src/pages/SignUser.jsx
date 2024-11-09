@@ -5,7 +5,7 @@ const initialState = {
   password: ''
 }
 
-const SignUser = () => {
+const SignUser = ({ onSignUp, onSignIn }) => {
   const [user, setUser] = useState(initialState)
 
   const { username, password } = user
@@ -46,6 +46,7 @@ const SignUser = () => {
           <button
             type="button"
             className="action sign-up-action"
+            onClick={() => onSignUp(user)}
           >
             Sign up
           </button>
@@ -53,6 +54,7 @@ const SignUser = () => {
           <button
             type="button"
             className="action sign-in-action"
+            onClick={() => onSignIn(user)}
           >
             Sign in
           </button>
